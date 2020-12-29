@@ -1,0 +1,28 @@
+<html>
+  <body>
+    <form id='form'>
+      Email: <input type='text' name='email' value='newtonschool@gmail.com'>
+      Password: <input type='password' name='password' value='tendulkar'>
+    </form>
+    <!-- <form id='form2'>
+      firstName: <input type='text' name='firstName' value='sachin'>
+      lastName: <input type='text' name='lastName' value='tendulkar'>
+    </form> -->
+    <button onclick="getData()"> Login </button>
+    <script>
+      function getData () {
+        // console.log(document.forms)
+        // console.log(document.forms['form2'])
+        console.log(document.forms['form'])
+        console.log(document.forms['form'].attributes)
+        // console.log(data)
+        let data = document.forms['form']
+        for(var i=0; i<data.length; i++) {
+          // console.log(data[i])
+          // console.log(data.elements[i])
+          console.log(data.elements[i].name, data.elements[i].value)
+        }
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,15 @@
+<html>
+  <body>
+    <h1 onmouseover="changeColor(this)" onmouseout="normalColor(this)">Heading color is black</h1>
+    <p onmouseover="paragraph(this)"></p>
+    <script>
+      function changeColor (element) {
+        console.log(element.style.color)
+        element.style.color = 'red'
+      }
+      function normalColor (element) {
+        element.style.color = ''
+      }
+    </script>
+  </body>
+</html>

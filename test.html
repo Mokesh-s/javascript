@@ -1,0 +1,25 @@
+<html>
+<body>
+
+<p id="demo">Previous <em>value</em></p>
+<button onclick="changeValue()">Change value</button>
+<img src='https://i.pinimg.com/originals/e2/5d/fd/e25dfd426d73449a2d28e840aa1ee4ce.jpg' 
+    width='200' height='250' alt='Book image'>
+<!-- absolute path -->
+<img src='/home/indian/javascriptSessions/book1.jpg' width="100" height="100" alt="book 2">
+<img id='book-3' src='../jsSessionImages/book3.jpg' width="100" height="100" alt="book 3">
+<button onclick="changeImage()">Change the book 3 image</button>
+<!-- relative path -->
+<script>
+function changeValue() {
+    console.log(document.getElementById("demo").innerHTML)
+    document.getElementById("demo").innerHTML = "Hello World!";
+}
+function changeImage() {
+    console.log((document.getElementById('book-3')).attributes)
+    document.getElementById('book-3').src = 'https://i.pinimg.com/originals/e2/5d/fd/e25dfd426d73449a2d28e840aa1ee4ce.jpg'
+}
+</script>
+
+</body>
+</html>

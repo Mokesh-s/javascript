@@ -1,0 +1,15 @@
+<html>
+<body>
+<h1 id='id-1'> User 1 </h1>
+<button id='click' onclick="clickFunction()">Click</button>
+<script>
+document.write('Hello world')
+let element = document.getElementById('id-1')
+element.innerHTML = 'User 2'
+function clickFunction () {
+let buttonElement = document.getElementById('click')
+buttonElement.innerHTML = 'Already Clicked'
+}
+</script>
+</body>
+</html>

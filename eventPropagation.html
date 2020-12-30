@@ -1,0 +1,36 @@
+<html>
+  <head>
+    <style>
+      div {
+        min-width: 100px;
+        min-height: 100px;
+        border: 1px solid;
+        padding: 50px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id='grand-parent'>
+        <div id='parent'>
+            <div id='grand-child'></div>
+        </div>
+    </div>
+    <script>
+      // if third paramater is flase events will events bubble up
+      // if third parameter is true events will events capture down
+      document.querySelector('#grand-parent')
+      .addEventListener('click', (e) => {
+        console.log('grand-parent is clicked')
+      }, true)
+      document.querySelector('#parent')
+      .addEventListener('click', (e) => {
+        e.stopPropagation()
+        console.log('parent is clicked')
+      }, true)
+      document.querySelector('#grand-child')
+      .addEventListener('click', (e) => {
+        console.log('grand child is clicked')
+      }, true)
+    </script>
+  </body>
+</html>

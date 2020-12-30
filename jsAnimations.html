@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+  <style>
+    #container {
+      width: 400px;
+      height: 400px;
+      border: 1px solid;
+      position: relative;
+    }
+    #square {
+      width: 50px;
+      height: 50px;
+      background-color: red;
+      position: absolute;
+      /* left: 350px; */
+      right: 0;
+      bottom: 0;
+    }
+  </style>
+  <body>
+    <div id='container'>
+      <div id='square'></div>
+    </div>
+    <button onclick="animateButton()">Animate</button>
+    <script>
+      function animateButton() {
+        let element = document.getElementById('square')
+        let pos = 0
+        let id = setInterval(adjustPosition, 10) // will call adjust position for
+                                                //every 10 milli seconds
+        function adjustPosition() {
+          if (pos === 350) clearInterval(id)
+          pos++ // increase the position by 1px for every 10 milli seconds
+          element.style.right = pos+'px'
+          element.style.bottom = pos+'px'
+          // console.log('set interval function')
+        }
+      }
+    </script>
+  </body>
+</html>
